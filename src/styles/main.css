@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 100vh;
+    background-color: #f5f5fc;
+    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#c5c6d1 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #c5c6d1 2px, #e5e5f7 2px) -1px 0;
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+.music-border {
+    z-index: 3;
+    border-bottom: 2px solid #403939;
+    padding: 0px 20px;
+    margin-bottom: -40px;
+}
+.musics {
+    z-index: 4;
+    width: 600px;
+    padding: 20px 10px;
+    border-top: 4px solid #403939;
+    border-left: 4px solid #403939;
+    border-right: 4px solid #403939;
+    background-color: #fff;
+}
+    .musics-header {
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: #b3b2b6 1px solid;
+    }
+    .musics-container {
+        scroll-behavior: smooth;
+        scroll-snap-type: proximity;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        max-height: 90px;
+    }
+    .music {
+        padding: 15px 0px;
+        border-bottom: #b3b2b6 1px solid;
+    }
+    .music h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .music p {
+        font-size: 20px;
+    }
+
+.keyboard-body {
+    z-index: 1;
+    width: fit-content;
+    padding: 50px 30px 0px;
+    box-shadow: -1px -1px 2px hsla(0, 0%, 100%, 0.2) inset,
+            0 5px 2px 3px #ffffff4a inset, 
+            0 -5px 2px 3px #362d52 inset, 
+            0 2px 4px #7463a8;
+    background: linear-gradient(180deg, #A490DE 0%,#7463a8 100%);
+    background-color: #A490DE;
+    border-radius: 12px;
+}
+.keyboard__header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+    .brand {
+        align-items: center;
+        gap: 10px;
+    }
+    .brand img {
+        width: 30px;
+    }
+    .brand p {
+        font-size: 20px;
+        color: #fff;
+    }
+    .screen {
+        width: 150px;
+        padding: 10px;
+        border: 7px solid #000;
+        background: #1a25bb;
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px 2px hsl(0deg 0% 100% / 43%), 
+            0px 0px 20px #00000052 inset;
+        color: #fff;
+        font-size: 12px;
+    }
+    .screen div {
+        justify-content: space-between;
+    }
+        .mode {
+            font-size: 10px;
+        }
+
+        .mode input {
+            display: none;
+        }
+        .mode label {
+            cursor: pointer;
+        }
+
+    .dial-container {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #594b85;
+        box-shadow: 6px 3px 2px #362d52,
+            inset 0px 3px 3px hsla(0, 0%, 100%, 0.3);
+        border-radius: 100%;
+        padding: 10px;
+        background: linear-gradient(180deg, #A490DE 0%, #7664AA 100%);
+    }
+    .dial {
+        width: 100%;
+        height: 100%;
+        transform: rotate(270deg);
+    }
+    .dial-knob {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #594b85;
+        border-radius: 100%;
+        background-color: #ffffff1a;
+    }
+
+.keyboard {
+    z-index: 2;
+    position: relative;
+    height: 300px;
+    box-shadow: 0px -4px 1px 3px #594b85;
+    border-radius: 8px;
+    margin-bottom: -10px;
+}
+    .keyboard__top {
+        position: absolute;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .key_black-set {
+        gap: 25px;
+    }
+    .key_black {
+        cursor: pointer;
+        width: 50px;
+        height: 175px;
+        border: 1px solid black;
+        border-radius: 0px 0px 6px 6px;
+        box-shadow: -1px -1px 2px hsla(0, 0%, 100%, 0.2) inset,
+            0 -5px 2px 3px hsla(0, 0%, 0%, 0.6) inset, 0 2px 4px hsla(0, 0%, 0%, 0.5);
+        background: linear-gradient(45deg, hsl(0, 0%, 13%) 0%, hsl(0, 0%, 33%) 100%);
+        color: #ffffffd3;
+    }
+        .key_black.pressed {
+            height: 180px;
+            box-shadow: -1px -1px 2px hsla(0, 0%, 100%, 0.2) inset,
+                0 -2px 2px 3px hsla(0, 0%, 0%, 0.6) inset, 0 1px 2px hsla(0, 0%, 0%, 0.5);
+            background: linear-gradient(
+                to right,
+                hsl(0, 0%, 27%) 0%,
+                hsl(0, 0%, 13%) 100%
+            );
+        }
+
+    .key_white {
+        cursor: pointer;
+        width: 75px;
+        height: 300px;
+        border: 1.5px solid #3e2f686b;
+        box-shadow: -1px 0 0 #ffffffcc inset, 
+            0 0 5px hsl(0, 0%, 80%) inset,
+            0 -5px 2px 3px hsla(0, 0%, 0%, 0.1) inset,
+            0 0 3px #00000033;
+        border-radius: 8px;
+        background: linear-gradient(to bottom, hsl(0, 0%, 93%) 0%, white 100%);
+        color: #00000098;
+    }
+        .key_white.pressed {
+            height: 305px;
+            box-shadow: 2px 0 3px #0000001a inset,
+            -5px 5px 20px #00000033 inset, 0 0 3px #00000033;
+             background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
+        }
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: bolder;
+    padding-bottom: 15px;
+}
