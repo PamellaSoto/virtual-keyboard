@@ -8,53 +8,24 @@
     <title>Virtual Keyboard</title>
 </head>
 <body>
-    <div class="music-border">
-        <div class="musics">
-            <div class="musics-header flex">
-                <h2>TABS</h2>
-                <p>Total tabs: 1</p>
-            </div>
-            <div class="musics-container">
-                <div class="music">
-                    <h3>Twinkle Twinkle Little Star</h3>
-                    <p>1-1-5-5-6-6-5 4-4-3-3-2-2-1</p>
-                </div>
-                <div class="music">
-                    <h3>Jingle Bells</h3>
-                    <p>777 777 79567 8888877776676 9</p>
-                </div>
-                <div class="music">
-                    <h3>Twinkle Twinkle Little Star</h3>
-                    <p>1 1 5 5 6 6 5  4 4 3 3 2 2 1</p>
-                </div>
-                <div class="music">
-                    <h3>Twinkle Twinkle Little Star</h3>
-                    <p>1 1 5 5 6 6 5  4 4 3 3 2 2 1</p>
-                </div>
-                <div class="music">
-                    <h3>Twinkle Twinkle Little Star</h3>
-                    <p>1 1 5 5 6 6 5  4 4 3 3 2 2 1</p>
-                </div>
-                <div class="music">
-                    <h3>Twinkle Twinkle Little Star</h3>
-                    <p>1 1 5 5 6 6 5  4 4 3 3 2 2 1</p>
-                </div>
-
-            </div>
+    <div class="tabs__container">
+        <button id="toggle-modal" class="toggle-tabs">MUSIC TABS</button>
+        <div class="tabs closed">
         </div>
     </div>
+    
 
-    <div class="keyboard-body">
+    <div class="keyboard">
         <div class="keyboard__header flex">
             <div class="brand flex">
                 <img src="./src/images/icon-white.png">
                 <p><b>MUSIC KEYBOARD</b></p>
             </div>
-            <div class="screen">
+            <div class="screen flex">
                 <div class="flex">
-                    <p>VOLUME </p><span id="volume">100%</span>
+                    <p>VOLUME </p><kbd id="volume">100%</kbd>
                 </div>
-                <div class="mode flex"><p>SHOW KEYS?</p><label for="toggle"><span>NO</span><input id="toggle" type="checkbox" name="" id=""></label>
+                <div class="mode flex"><p>SHOW KEYS?</p><label for="toggle"><kbd>NO</kbd><input id="toggle" type="checkbox" name="" id=""></label>
                 </div>
                 
             </div>
@@ -64,88 +35,94 @@
                 </div>
             </div>
         </div>
-        <div class="keyboard">
+        <div class="keyboard-body">
             <div class="keyboard__top flex">
                 <div class="key_black-set flex">
-                    <div class="key key_black">
-                        <span>2</span>
-                        <audio class="note" src="./src/sounds/DB4.mp3"></audio>
+                    <div data-key="2" class="key key_black">
+                        <kbd>2</kbd>
+    
                     </audio></div>
-                    <div class="key key_black">
-                        <span>3</span>
-                        <audio class="note" src="./src/sounds/EB4.mp3"></audio>
+                    <div data-key="3" class="key key_black">
+                        <kbd>3</kbd>
+    
                     </div>   
                 </div>
                 <div class="key_black-set flex">
-                    <div class="key key_black">
-                        <span>5</span>
-                        <audio class="note" src="./src/sounds/GB4.mp3"></audio>
+                    <div data-key="5" class="key key_black">
+                        <kbd>5</kbd>
+    
                     </div>
-                    <div class="key key_black">
-                        <span>6</span>
-                        <audio class="note" src="./src/sounds/AB4.mp3"></audio>
+                    <div data-key="6" class="key key_black">
+                        <kbd>6</kbd>
+    
                     </div>
-                    <div class="key key_black">
-                        <span>7</span>
-                        <audio class="note" src="./src/sounds/BB4.mp3"></audio>
+                    <div data-key="7" class="key key_black">
+                        <kbd>7</kbd>
+    
                     </div>
                 </div>
                 <div class="key_black-set flex">
-                    <div class="key key_black">
-                        <span>9</span>
-                        <audio class="note" src="./src/sounds/DB5.mp3"></audio>
+                    <div data-key="9" class="key key_black">
+                        <kbd>9</kbd>
                     </div>
-                    <div class="key key_black">
-                        <span>0</span>
-                        <audio class="note" src="./src/sounds/EB5.mp3"></audio>
+                    <div data-key="0" class="key key_black">
+                        <kbd>0</kbd>
                     </div>
                 </div>
             </div>
             <div class="keyboard__bottom flex">
-                <div class="key key_white">
-                    <span>Q</span>
-                    <audio class="note" src="./src/sounds/C4.mp3"></audio>
+                <div data-key="q" class="key key_white">
+                    <kbd>Q</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>W</span>
-                    <audio class="note" src="./src/sounds/D4.mp3"></audio>
+                <div data-key="w" class="key key_white">
+                    <kbd>W</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>E</span>
-                    <audio class="note" src="./src/sounds/E4.mp3"></audio>
+                <div data-key="e" class="key key_white">
+                    <kbd>E</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>R</span>
-                    <audio class="note" src="./src/sounds/F4.mp3"></audio>
+                <div data-key="r" class="key key_white">
+                    <kbd>R</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>T</span>
-                    <audio class="note" src="./src/sounds/G4.mp3"></audio>
+                <div data-key="t" class="key key_white">
+                    <kbd>T</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>Y</span>
-                    <audio class="note" src="./src/sounds/A4.mp3"></audio>
+                <div data-key="y" class="key key_white">
+                    <kbd>Y</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>U</span>
-                    <audio class="note" src="./src/sounds/B4.mp3"></audio>
+                <div data-key="u" class="key key_white">
+                    <kbd>U</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>I</span>
-                    <audio class="note" src="./src/sounds/C5.mp3"></audio>
+                <div data-key="i" class="key key_white">
+                    <kbd>I</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>O</span>
-                    <audio class="note" src="./src/sounds/D5.mp3"></audio>
+                <div data-key="o" class="key key_white">
+                    <kbd>O</kbd>
                 </div>
-                <div class="key key_white">
-                    <span>P</span>
-                    <audio class="note" src="./src/sounds/E5.mp3"></audio>
+                <div data-key="p" class="key key_white">
+                    <kbd>P</kbd>
                 </div>
             </div>
         </div>
     </div>
-    <div><p><u>How to play?</u></p></div>
+
+    <audio data-key-audio="2" src="./src/sounds/DB4.mp3"></audio>
+    <audio data-key-audio="3" src="./src/sounds/EB4.mp3"></audio>
+    <audio data-key-audio="5" src="./src/sounds/GB4.mp3"></audio>
+    <audio data-key-audio="6" src="./src/sounds/AB4.mp3"></audio>
+    <audio data-key-audio="7" src="./src/sounds/BB4.mp3"></audio>
+    <audio data-key-audio="9" src="./src/sounds/DB5.mp3"></audio>
+    <audio data-key-audio="0" src="./src/sounds/EB5.mp3"></audio>
+    <audio data-key-audio="q" src="./src/sounds/C4.mp3"></audio>
+    <audio data-key-audio="w" src="./src/sounds/D4.mp3"></audio>
+    <audio data-key-audio="e" src="./src/sounds/E4.mp3"></audio>
+    <audio data-key-audio="r" src="./src/sounds/F4.mp3"></audio>
+    <audio data-key-audio="t" src="./src/sounds/G4.mp3"></audio>
+    <audio data-key-audio="y" src="./src/sounds/A4.mp3"></audio>
+    <audio data-key-audio="u" src="./src/sounds/B4.mp3"></audio>
+    <audio data-key-audio="i" src="./src/sounds/C5.mp3"></audio>
+    <audio data-key-audio="o" src="./src/sounds/D5.mp3"></audio>
+    <audio data-key-audio="p" src="./src/sounds/E5.mp3"></audio>
+
     <script src="./src/scripts/keyboard.js"></script>
 </body>
 </html>
